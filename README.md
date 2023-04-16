@@ -1,4 +1,6 @@
 # adi_action_segmentation_tcn
+> This project was produced during an internship at [Analog Devices Inc](https://www.analog.com/en/index.html).
+
 A low-cost Temporal Conv. Network (TCN) solution targeting action segmentation of videos from Kinetics dataset. This code can train and evaluate several models, reports logs and TensorBoard outputs. Most of the candidate models have seperate CNN layers (processing frames) and TCN structure on top (processing in time).
 
 The challenges are:
