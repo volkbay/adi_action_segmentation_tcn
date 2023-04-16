@@ -1,0 +1,61 @@
+batchSize: 16
+bias: true
+blacklistFile: ./blacklists/blacklist100.yaml
+classWeights:
+- 0.2
+- 0.25
+- 0.2
+- 0.25
+- 0.1
+classWeightsFlag: true
+dataConfig:
+  bulkPickles: true
+  dataCount: 4
+  doubleClasses:
+  - 1
+  - 2
+  fixedDataset: true
+  loadData2memory: true
+  multiplyData: false
+  singleBackgroundPath: new_background
+  singleBackgroundPickle: true
+  tossFirstLastFrames: true
+dataPath: /data_ssd/processed/kinetics400/
+dropoutRate: 0.5
+epochNo: 250
+foldRatio: 4
+fps: 5
+frameNoDataset: 50
+frameNoModel: 16
+imgSize:
+- 256
+- 256
+labels:
+- pull ups
+- push up
+- situp
+- squat
+- background
+lastLayerInitUniform: false
+learningRate: 0.001
+logBatchAt: 50
+maxValidationAcc: 71.20315581854044
+maxValidationTrainNo: 64
+modelVersion: 20
+multiStageModelList:
+- 6
+- 7
+schedulerFlag: true
+schedulerGamma: 0.5
+schedulerMilestones:
+- 10
+- 20
+- 25
+trainNo: 72
+validationAccThr: 75
+warmStartConfig:
+  checkpointFile: ./sav/model17_trainNo60_at_epoch_197_with_acc_71_60_checkpoint.pth.tar
+  checkpointModelNo: 17
+  freezeSpatialCNN: false
+  warmStartFlag: false
+weightDecay: 0.001
